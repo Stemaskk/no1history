@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ohlone History — Questionnaire</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+</head>
+<body>
+<header class="container">
+    <h1>Ohlone History Questionnaire</h1>
+    <p class="subtitle">Answer all questions and click “Check Answers”. Get them all right to be redirected.</p>
+
+    <div class="actions" style="justify-content:center; flex-wrap:wrap; gap:.6rem;">
+        <a class="btn ghost" href="https://www.ohlone.edu/ohlonehistory" target="_blank" rel="noopener noreferrer">
+            Open Ohlone History (Official)
+        </a>
+    </div>
+</header>
+
+<main class="container">
+    <form id="quiz-form" class="qa-form" novalidate action="javascript:void(0)">
+        <section class="card" aria-labelledby="hist-title">
+            <h2 id="hist-title">History</h2>
+
+            <!-- Q1 -->
+            <fieldset class="q">
+                <legend>1) Where was the first official meeting of the Board of Trustees?</legend>
+                <div class="choices">
+                    <label><input type="radio" name="hist-meeting" value="sujus cafe"> sujus cafe</label>
+                    <label><input type="radio" name="hist-meeting" value="John f. Kennedy Highschool"> John f. Kennedy Highschool</label>
+                    <label><input type="radio" name="hist-meeting" value="Ohlone College"> Ohlone College</label>
+                    <label><input type="radio" name="hist-meeting" value="Federal Government Office"> Federal Government Office</label>
+                </div>
+            </fieldset>
+
+            <!-- Q2 -->
+            <fieldset class="q">
+                <legend>2) Who suggested the name “Ohlone”?</legend>
+                <input id="hist-suggester" name="hist-suggester" type="text" placeholder="Type the full name…" required />
+                <small class="help">Case and spaces don’t matter.</small>
+            </fieldset>
+
+            <!-- Q3 -->
+            <fieldset class="q">
+                <legend>3) Which tradition did the suggester of the name embody?</legend>
+                <div class="choices">
+                    <label><input type="radio" name="hist-tradition" value="Miwuk tribe"> Miwuk tribe</label>
+                    <label><input type="radio" name="hist-tradition" value="Yurok tribe"> Yurok tribe</label>
+                    <label><input type="radio" name="hist-tradition" value="Chumash tribe"> Chumash tribe</label>
+                    <label><input type="radio" name="hist-tradition" value="Pomo tribe"> Pomo tribe</label>
+                </div>
+            </fieldset>
+
+            <!-- Q4 -->
+            <fieldset class="q">
+                <legend>4) How many students graduated in the first year of Ohlone College being constructed?</legend>
+                <input id="hist-first-grads" name="hist-first-grads" type="text" inputmode="numeric" placeholder="Type the number…" required />
+            </fieldset>
+
+            <!-- Q5 -->
+            <fieldset class="q">
+                <legend>5) Who is the current president of Ohlone College?</legend>
+                <input id="hist-president" name="hist-president" type="text" placeholder="Type the name…" required />
+            </fieldset>
+
+            <div class="actions">
+                <button id="checkAll" type="submit" class="btn">Check Answers</button>
+                <button type="button" class="btn ghost" id="resetAll">Reset</button>
+            </div>
+        </section>
+    </form>
+
+    <section class="card" aria-labelledby="results-title">
+        <h2 id="results-title">Results</h2>
+        <output id="results" class="output" aria-live="polite"></output>
+    </section>
+</main>
+
+<footer class="container footer">
+    <small>All checking is done locally in your browser.</small>
+</footer>
+</body>
+</html>
